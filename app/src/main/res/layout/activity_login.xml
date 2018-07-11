@@ -1,102 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <TextView
+        android:id="@+id/lblAppName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Employee Payroll"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:id="@+id/llTOp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:paddingTop="56dp">
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblAppName"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="12dp"
+        android:drawableRight="@android:drawable/ic_menu_edit"
+        android:hint="Email Address"
+        android:inputType="textPersonName"
+        android:textColorLink="@android:color/darker_gray" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="72dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="24dp"
-                android:contentDescription="Logo"
-                android:src="@drawable/ic_launcher_Payroll">
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableRight="@android:drawable/ic_lock_idle_lock"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColorLink="@android:color/darker_gray"/>
 
-            </ImageView>
+    <CheckBox
+        android:id="@+id/ckbRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Remember_me" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ckbRememberMe"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true">
 
-
-            <!-- Email Label -->
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
-
-                <EditText
-                    android:id="@+id/edtEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="EnterEmail"
-                    android:inputType="textEmailAddress"
-                    android:drawablePadding="2dp"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <!-- Password Label -->
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
-
-                <EditText
-                    android:id="@+id/edtPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="EnterPassword"
-                    android:inputType="textPassword"
-                    android:drawablePadding="2dp"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <CheckBox
-                android:id="@+id/chkRememberMe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="remember me"/>
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btnLogin"
-                style="@style/AlertDialog.AppCompat.Light"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:layout_marginTop="24dp"
-                android:padding="12dp"
-                android:text="Login"/>
-
-            <TextView
-                android:id="@+id/link_signup"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:gravity="center"
-                android:text="No account? Create for yourself"
-                android:textSize="16dp"/>
-
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/txtVersionCode"
-            android:layout_width="fill_parent"
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"
-            android:layout_below="@+id/llTOp"
-            android:text="Version"
-            android:textSize="16dip"/>
-    </RelativeLayout>
-</ScrollView>
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register" />
+
+    </LinearLayout>
