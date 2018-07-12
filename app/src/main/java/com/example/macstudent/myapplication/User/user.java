@@ -1,9 +1,5 @@
 package com.example.macstudent.myapplication.User;
 
-/**
- * Created by ADMIN on 7/10/2018.
- */
-
 public class user {
     private String full_name;
     private String email;

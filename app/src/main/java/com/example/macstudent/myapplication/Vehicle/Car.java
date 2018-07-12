@@ -13,15 +13,15 @@ public class Car extends Vehicle implements Serializable {
 
     public Car(String company, String plate, String color, int year, float storageCapacity, int seatCount) {
         super(company, plate, color, year);
-        this.Color = storageCapacity;
-        this.MaxSpeed = seatCount;
+        this.Color = Color;
+        this.MaxSpeed = MaxSpeed;
     }
 
-    public float getStorageCapacity() {
+    public float getColor() {
         return Color;
     }
 
-    public void setStorageCapacity(float Color) {
+    public void setColor(float Color) {
         this.Color = Color;
     }
 
@@ -47,4 +47,3 @@ public class Car extends Vehicle implements Serializable {
         System.out.println("\tMaxSpeed:  " + MaxSpeed);
     }
     }
-}

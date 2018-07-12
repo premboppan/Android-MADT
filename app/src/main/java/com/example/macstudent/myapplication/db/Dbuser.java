@@ -29,7 +29,7 @@ public class Dbuser {
     private Context context;
     private DBHelper dbHelper;
 
-    public DBUser(Context context)
+    public Dbuser(Context context)
     {
         this.context = context;
     }
@@ -49,7 +49,7 @@ public class Dbuser {
 
     }
 
-    public void updateUser(User user)
+    public void updateUser(User User)
     {
         dbHelper = new DBHelper(context);
         SQLiteDatabase database = dbHelper.getWritableDatabase();
@@ -74,12 +74,12 @@ public class Dbuser {
     }
 
 
-    public void deleteUser(User user)
+    public void deleteUser(User User)
     {
         dbHelper = new DBHelper(context);
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
-        database.delete(TABLE_USER, USER_EMAIL + "=?", new String[]{user.getEmail()});
+        database.delete(TABLE_USER, USER_EMAIL + "=?", new String[]{User.getEmail()});
 
         database.close();
 

@@ -1,9 +1,5 @@
 package com.example.macstudent.myapplication.model;
 
-/**
- * Created by ADMIN on 7/10/2018.
- */
-
 public class EmployeeList {
     private String title;
     private String description;

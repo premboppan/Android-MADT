@@ -2,6 +2,7 @@ package com.example.macstudent.myapplication.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import static com.example.macstudent.myapplication.db.Dbuser.*;
@@ -78,6 +79,4 @@ public class DBHelper extends SQLiteOpenHelper
         // Create tables again
         onCreate(sqLiteDatabase);
     }
-}
- {
 }

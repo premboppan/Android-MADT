@@ -20,7 +20,7 @@ public class Motorcycle extends Vehicle implements Serializable{
         this.MaxSpeed = MaxSpeed;
     }
 
-    public float getColor() { return Color;
+    public float getColor() { return Color;}
 
     public void setColor(float Color) {
         this.Color = Color;
@@ -45,8 +45,8 @@ public class Motorcycle extends Vehicle implements Serializable{
         System.out.println("\tVehicle Number:   " + getPlate());
         System.out.println("\tColour:           " + getColour());
         System.out.println("\tManufactured Year:" + getYear());
-        System.out.println("\tEngine Power:     " + getColor()+"CC");
-        System.out.println("\tTop Speed:        " + getMaxSpeed());
+
+
     }
 }
 

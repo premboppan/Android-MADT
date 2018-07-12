@@ -8,9 +8,6 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-/**
- * Created by ADMIN on 7/10/2018.
- */
 
 public class Employee {
     private Context context;
@@ -165,4 +162,3 @@ public class Employee {
 
 }
 
-}
